@@ -1,0 +1,9 @@
+$frontendDockerignore = @'
+node_modules/
+build/
+.env
+.env.local
+.git/
+'@
+
+$frontendDockerignore | Out-File -FilePath "frontend\.dockerignore" -Encoding UTF8
