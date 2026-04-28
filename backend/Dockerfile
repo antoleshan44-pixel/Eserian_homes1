@@ -1,5 +1,3 @@
-# Create backend Dockerfile
-$dockerfileBackend = @'
 # Multi-stage Dockerfile for Spring Boot Backend
 FROM maven:3.9-eclipse-temurin-17-alpine AS build
 
@@ -32,6 +30,3 @@ EXPOSE 8080
 
 # Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
-'@
-
-$dockerfileBackend | Out-File -FilePath "backend\Dockerfile" -Encoding UTF8
